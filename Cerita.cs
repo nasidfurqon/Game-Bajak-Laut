@@ -30,10 +30,11 @@ namespace GameBajakLaut
             Console.WriteLine($"{nama} :'Lalu bagaimana aku bisa mengalahkan 2 monster itu + penjaganya?'");
             Console.ReadKey();
             Console.WriteLine($"Bajak Laut:'Kamu bisa memilih salah satu dari 3 pahlawan yang akan Membantumu"
-            +" 'mereka memiliki kelebihan dan kekurangan masing masing");
+            +" mereka memiliki kelebihan dan kekurangan masing masing'");
             Console.ReadKey();
             Console.WriteLine($"Bajak Laut:'Semoga Berhasil'");
             Console.ReadKey();
+            Karakter karakter=new Karakter();
         }
     }
 }

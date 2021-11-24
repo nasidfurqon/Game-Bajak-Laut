@@ -18,13 +18,14 @@ namespace GameBajakLaut
         {
             NamaMusuh1 ="Kraken";
             SenjataMusuh1="Semprotan Racun";
-            NyawaMusuh1=20;
-            NyawaMusuh2=16;
-            KerusakanMusuh1=4;
+            NyawaMusuh1=60;
+            KerusakanMusuh1=5;
             KegesitanMusuh1=5;
+
             NamaMusuh2 ="Garuda";
             SenjataMusuh2="Trisula";
-            KerusakanMusuh2=2;
+            NyawaMusuh2=60;
+            KerusakanMusuh2=5;
             KegesitanMusuh2=7;
         }
     }
