@@ -6,7 +6,7 @@ namespace GameBajakLaut
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Cerita cerita=new Cerita();
         }
     }
 }
