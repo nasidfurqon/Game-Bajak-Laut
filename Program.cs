@@ -1,5 +1,6 @@
 ﻿using System;
-namespace NewGame
+
+namespace GameBajakLaut
 {
     class Program
     {
