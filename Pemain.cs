@@ -43,7 +43,7 @@ namespace GameBajakLaut
             {   
                 Console.WriteLine($"Sisa Nyawa {Karakter1} : {Nyawa}");
                 Console.WriteLine("Pilih Salah Satu monster yang akan kamu serang :");
-                Console.WriteLine($"1.{NamaMusuh1}, nyawa:({NyawaMusuh1}), kelincahan : {KegesitanMusuh1},Daya rusak{KerusakanMusuh1} "
+                Console.WriteLine($"1.{NamaMusuh1}, nyawa:({NyawaMusuh1}), kelincahan : {KegesitanMusuh1},daya rusak {KerusakanMusuh1} "
                 +$" \n2.{NamaMusuh2},nyawa:({NyawaMusuh2}), kelincahan : {KegesitanMusuh2}, daya rusak {KerusakanMusuh2} \n3.Regen nyawamu");
                 int pilih=Convert.ToInt32(Console.ReadLine());
                 if (pilih==1)
@@ -67,7 +67,7 @@ namespace GameBajakLaut
                         if(presentaseMenghindar < KegesitanMusuh1)
                         {
                             Nyawa-=KerusakanMusuh1;
-                            Console.Write($"awasss,Si {NamaMusuh1} berhasil menghindar,dia malah menyerang {Karakter1}"
+                            Console.Write($"Awasss, Si {NamaMusuh1} berhasil menghindar, dia malah menyerang {Karakter1}"
                             +$" nyawa {Karakter1} sekarang hanya tinggal {Nyawa} \n");
                         }
                     }
@@ -94,7 +94,7 @@ namespace GameBajakLaut
                         if(presentaseMenghindar < KegesitanMusuh2)
                         {
                             Nyawa-=KerusakanMusuh2;
-                            Console.Write($"awasss,Si {NamaMusuh2} berhasil menghindar,dia malah menyerang {Karakter1}"
+                            Console.Write($"Awasss, Si {NamaMusuh2} berhasil menghindar, dia malah menyerang {Karakter1}"
                             +$" nyawa {Karakter1} sekarang hanya tinggal {Nyawa} \n");
                         }
                     }
@@ -181,7 +181,7 @@ namespace GameBajakLaut
                         if(presentaseMenghindar < KegesitanMusuh1)
                         {
                             Nyawa2-=KerusakanMusuh1;
-                            Console.Write($"awasss,Si {NamaMusuh1} berhasil menghindar,dia malah menyerang {Karakter2}"
+                            Console.Write($"Awasss, Si {NamaMusuh1} berhasil menghindar, dia malah menyerang {Karakter2}"
                             +$" nyawa {Karakter2} sekarang hanya tinggal {Nyawa2} \n");
                         }
                     }
@@ -208,7 +208,7 @@ namespace GameBajakLaut
                         if(presentaseMenghindar < KegesitanMusuh2)
                         {
                             Nyawa2-=KerusakanMusuh2;
-                            Console.Write($"awasss,Si {NamaMusuh2} berhasil menghindar,dia malah menyerang {Karakter2}"
+                            Console.Write($"Awasss, Si {NamaMusuh2} berhasil menghindar, dia malah menyerang {Karakter2}"
                             +$" nyawa {Karakter2} sekarang hanya tinggal {Nyawa2} \n");
                         }
                     }
@@ -324,7 +324,7 @@ namespace GameBajakLaut
                         if(presentaseMenghindar < KegesitanMusuh2)
                         {
                             Nyawa3-=KerusakanMusuh2;
-                            Console.Write($"awasss,Si {NamaMusuh2} berhasil menghindar,dia malah menyerang {Karakter3}"
+                            Console.Write($"Awasss, Si {NamaMusuh2} berhasil menghindar, dia malah menyerang {Karakter3}"
                             +$" nyawa {Karakter3} sekarang hanya tinggal {Nyawa3} \n");
                         }
                     }
@@ -388,7 +388,7 @@ namespace GameBajakLaut
             while(NyawaPenjaga>0)
             {   
                 Console.WriteLine($"Sisa Nyawa {Karakter1} : {Nyawa}");
-                Console.WriteLine($"1.serang {NamaPenjaga}, nyawa:({NyawaPenjaga}), kelincahan : {KegesitanPenjaga},Daya rusak{KerusakanPenjaga} "
+                Console.WriteLine($"1.serang {NamaPenjaga}, nyawa:({NyawaPenjaga}), kelincahan : {KegesitanPenjaga}, daya rusak {KerusakanPenjaga} "
                 +$"\n2.Regen nyawamu");
                 int pilih=Convert.ToInt32(Console.ReadLine());
                 if (pilih==1)
@@ -481,7 +481,7 @@ namespace GameBajakLaut
             while(NyawaPenjaga>0)
             {   
                 Console.WriteLine($"Sisa Nyawa {Karakter2} : {Nyawa2}");
-                Console.WriteLine($"1.serang {NamaPenjaga}, nyawa:({NyawaPenjaga}), kelincahan : {KegesitanPenjaga},Daya rusak{KerusakanPenjaga} "
+                Console.WriteLine($"1.serang {NamaPenjaga}, nyawa:({NyawaPenjaga}), kelincahan : {KegesitanPenjaga},daya rusak {KerusakanPenjaga} "
                 +$"\n2.Regen nyawamu");
                 int pilih=Convert.ToInt32(Console.ReadLine());
                 if (pilih==1)
@@ -575,7 +575,7 @@ namespace GameBajakLaut
             while(NyawaPenjaga>0)
             {   
                 Console.WriteLine($"Sisa Nyawa {Karakter3} : {Nyawa3}");
-                Console.WriteLine($"1.serang {NamaPenjaga}, nyawa:({NyawaPenjaga}), kelincahan : {KegesitanPenjaga},Daya rusak{KerusakanPenjaga} "
+                Console.WriteLine($"1.serang {NamaPenjaga}, nyawa:({NyawaPenjaga}), kelincahan : {KegesitanPenjaga}, daya rusak {KerusakanPenjaga} "
                 +$"\n2.Regen nyawamu");
                 int pilih=Convert.ToInt32(Console.ReadLine());
                 if (pilih==1)
