@@ -14,11 +14,18 @@ namespace GameBajakLaut
         public string SenjataMusuh2 {get;set;}
         public int KegesitanMusuh1 {get;set;}
         public int KegesitanMusuh2 {get;set;}
+        
+        public string NamaPenjaga {get;set;}
+        public int NyawaPenjaga {get;set;}
+        public int KerusakanPenjaga {get;set;}
+        public string SenjataPenjaga {get;set;}
+        public int KegesitanPenjaga {get;set;}
+        
         public Musuh()
         {
             NamaMusuh1 ="Kraken";
             SenjataMusuh1="Semprotan Racun";
-            NyawaMusuh1=60;
+            NyawaMusuh1=65;
             KerusakanMusuh1=5;
             KegesitanMusuh1=5;
 
@@ -27,6 +34,12 @@ namespace GameBajakLaut
             NyawaMusuh2=60;
             KerusakanMusuh2=5;
             KegesitanMusuh2=7;
+
+            NamaPenjaga ="Hydra";
+            SenjataPenjaga="Semburan Api";
+            NyawaPenjaga=80;
+            KerusakanPenjaga=10;
+            KegesitanPenjaga=9;
         }
     }
 
