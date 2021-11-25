@@ -1,4 +1,5 @@
 using System;
+
 namespace GameBajakLaut
 {
     class Pemain :Musuh
@@ -34,15 +35,17 @@ namespace GameBajakLaut
             Nyawa3=80;
             Kerusakan3=6;
         }
+
         public void Serang()
         {
-            Console.ReadKey();
+            int jumlahRegen=3;
             while(NyawaMusuh1>0 || NyawaMusuh2>0)
             {   
                 Console.WriteLine($"Sisa Nyawa {Karakter1} : {Nyawa}");
                 Console.WriteLine("Pilih Salah Satu monster yang akan kamu serang :");
                 Console.WriteLine($"1.{NamaMusuh1}, nyawa:({NyawaMusuh1}), kelincahan : {KegesitanMusuh1},Daya rusak{KerusakanMusuh1} "
-                +$" \n2.{NamaMusuh2},nyawa:({NyawaMusuh2}), kelincahan : {KegesitanMusuh2}, daya rusak {KerusakanMusuh1} \n3.Keluar");
+                +$" \n2.{NamaMusuh2},nyawa:({NyawaMusuh2}), kelincahan : {KegesitanMusuh2}, daya rusak {KerusakanMusuh1} \n3.Regen nyawamu"
+                +"\n4.Keluar");
                 int pilih=Convert.ToInt32(Console.ReadLine());
                 if (pilih==1)
                 {
@@ -97,7 +100,35 @@ namespace GameBajakLaut
                         }
                     }
                 }
-                if (pilih==3)
+                if(pilih==3)
+                {
+                    if(jumlahRegen<=0)
+                    {
+                        Console.WriteLine("Kemampuan Regenmu sudah habis");
+                    }
+                    else if(Nyawa==80)
+                    {
+                        Console.WriteLine("Nyawa Maksimal dan tidak bisa melakukan regen");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"nyawamu sekarang {Nyawa}");
+                        Console.WriteLine("Ketik regen untuk mengisi nyawamu kembali");
+                        var jawab=Console.ReadLine();
+                        if(jawab=="regen")
+                        {   
+                            Nyawa +=5;
+                            jumlahRegen-=1;
+                            Console.WriteLine($"nyawamu sekarang sudah menjadi {Nyawa}");
+                            Console.WriteLine($"Kemampuan regenmu tinggal {jumlahRegen} kali");
+                        }
+                        else
+                        {
+                            Console.WriteLine("input tidak valid!!");
+                        }
+                    }
+                }
+                if (pilih==4)
                 {
                     Menu menu= new Menu();
                 }
@@ -109,7 +140,7 @@ namespace GameBajakLaut
                     Console.ReadKey();
                    Penjaga penjaga =new Penjaga ();
                 }
-                if(Nyawa==0)
+                if(Nyawa<=0)
                 {
                     Console.WriteLine($"{Karakter1} kalah!!");
                     Console.WriteLine(" ");
@@ -125,13 +156,14 @@ namespace GameBajakLaut
         }
         public void Serang2()
         {
-            Console.ReadKey();
+            int jumlahRegen=3;
             while(NyawaMusuh1>0 || NyawaMusuh2>0)
             {   
-                Console.WriteLine($"Sisa Nyawa {Karakter2} : {Nyawa}");
+                Console.WriteLine($"Sisa Nyawa {Karakter2} : {Nyawa2}");
                 Console.WriteLine("Pilih Salah Satu monster yang akan kamu serang :");
                 Console.WriteLine($"1.{NamaMusuh1}, nyawa:({NyawaMusuh1}), kelincahan : {KegesitanMusuh1}, daya rusak {KerusakanMusuh1} "
-                +$" \n2.{NamaMusuh2},nyawa:({NyawaMusuh2}), kelincahan : {KegesitanMusuh1}, daya rusak {KerusakanMusuh2} \n3.Keluar");
+                +$" \n2.{NamaMusuh2},nyawa:({NyawaMusuh2}), kelincahan : {KegesitanMusuh1}, daya rusak {KerusakanMusuh2} \n3.regen Nyawamu"
+                +"\n4.Keluar");
                 int pilih=Convert.ToInt32(Console.ReadLine());
                 if (pilih==1)
                 {
@@ -186,19 +218,49 @@ namespace GameBajakLaut
                         }
                     }
                 }
-                if (pilih==3)
+                if(pilih==3)
+                {
+                    if(jumlahRegen<=0)
+                    {
+                        Console.WriteLine("Kemampuan Regenmu sudah habis");
+                    }
+                    else if(Nyawa2==60)
+                    {
+                        Console.WriteLine("Nyawa Maksimal dan tidak bisa melakukan regen");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine($"nyawamu sekarang {Nyawa2}");
+                        Console.WriteLine("Ketik regen untuk mengisi nyawamu kembali");
+                        var jawab=Console.ReadLine();
+                        if(jawab=="regen")
+                        {   
+                            Nyawa2+=5;
+                            jumlahRegen-=1;
+                            Console.WriteLine($"nyawamu sekarang sudah menjadi {Nyawa2}");
+                            Console.WriteLine($"Kemampuan regenmu tinggal {jumlahRegen} kali");
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("input tidak valid!!");
+                        }
+                    }
+                }
+                if (pilih==4)
                 {
                     Menu menu= new Menu();
                 }
-                if (NyawaMusuh1==0 && NyawaMusuh2==0)
+                if (NyawaMusuh1<=0 && NyawaMusuh2<=0)
                 {
                     Console.WriteLine(" ");
                     Console.WriteLine($"Bajak Laut:'selamat!!,{Karakter2} berhasil mengalahkan {NamaMusuh1} dan {NamaMusuh2}"
                     +$" dengan nyawa yang tersisa {Nyawa2}'");
                     Console.ReadKey();
-                   Penjaga penjaga =new Penjaga ();
+                    Penjaga penjaga =new Penjaga ();
                 }
-                if(Nyawa==0)
+                if(Nyawa2<=0)
                 {
                     Console.WriteLine($"{Karakter2} kalah!!");
                     Console.WriteLine(" ");
@@ -214,13 +276,14 @@ namespace GameBajakLaut
         }
         public void Serang3()
         {
-            Console.ReadKey();
+            int jumlahRegen=3;
             while(NyawaMusuh1>0 || NyawaMusuh2>0)
             {   
-                Console.WriteLine($"Sisa Nyawa {Karakter3} : {Nyawa}");
+                Console.WriteLine($"Sisa Nyawa {Karakter3} : {Nyawa3}");
                 Console.WriteLine("Pilih Salah Satu monster yang akan kamu serang :");
                 Console.WriteLine($"1.{NamaMusuh1}, nyawa:({NyawaMusuh1}), kelincahan : {KegesitanMusuh1}, daya rusak {KerusakanMusuh1} "
-                +$" \n2.{NamaMusuh2},nyawa:({NyawaMusuh2}), kelincahan : {KegesitanMusuh1}, daya rusak {KerusakanMusuh2} \n3.Keluar");
+                +$" \n2.{NamaMusuh2},nyawa:({NyawaMusuh2}), kelincahan : {KegesitanMusuh1}, daya rusak {KerusakanMusuh2} \n3.regen Nyawamu"
+                +"\n4.Keluar");
                 int pilih=Convert.ToInt32(Console.ReadLine());
                 if (pilih==1)
                 {
@@ -275,7 +338,37 @@ namespace GameBajakLaut
                         }
                     }
                 }
-                if (pilih==3)
+                if(pilih==3)
+                {
+                    if(jumlahRegen<=0)
+                    {
+                        Console.WriteLine("Kemampuan Regenmu sudah habis");
+                    }
+                    else if(Nyawa3==80)
+                    {
+                        Console.WriteLine("Nyawa Maksimal dan tidak bisa melakukan regen");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine($"nyawamu sekarang {Nyawa3}");
+                        Console.WriteLine("Ketik regen untuk mengisi nyawamu kembali");
+                        var jawab=Console.ReadLine();
+                        if(jawab=="regen")
+                        {   
+                            Nyawa3+=5;
+                            jumlahRegen-=1;
+                            Console.WriteLine($"nyawamu sekarang sudah menjadi {Nyawa3}");
+                            Console.WriteLine($"Kemampuan regenmu tinggal {jumlahRegen} kali");
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("input tidak valid!!");
+                        }
+                    }
+                }
+                if (pilih==4)
                 {
                     Menu menu= new Menu();
                 }
@@ -287,7 +380,7 @@ namespace GameBajakLaut
                     Console.ReadKey();
                    Penjaga penjaga =new Penjaga ();
                 }
-                if(Nyawa==0)
+                if(Nyawa3<=0)
                 {
                     Console.WriteLine($"{Karakter3} kalah!!");
                     Console.WriteLine(" ");

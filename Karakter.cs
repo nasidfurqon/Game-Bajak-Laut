@@ -30,7 +30,7 @@ namespace GameBajakLaut
            if(pilihan==2)
            {
                Console.WriteLine($"Kamu memilih {Karakter2} yang memiliki nyawa sebesar {Nyawa2}");
-               Console.WriteLine($"{Karakter1} memiliki daya rusak {Kerusakan2} dan mempunyai senjata {Senjata2}");
+               Console.WriteLine($"{Karakter3} memiliki daya rusak {Kerusakan2} dan mempunyai senjata {Senjata2}");
                 Console.WriteLine(" ");
                Console.WriteLine($"1.Lanjut sebagai {Karakter2} \n2.Pilih Karakter Lain");
                int pilih=Convert.ToInt32(Console.ReadLine());
@@ -49,8 +49,8 @@ namespace GameBajakLaut
            }
            if(pilihan==3)
            {
-               Console.WriteLine($"Kamu memilih {Karakter3} yang memiliki nyawa sebesar {Nyawa2}");
-               Console.WriteLine($"{Karakter1} memiliki daya rusak {Kerusakan2} dan mempunyai senjata {Senjata2}");
+               Console.WriteLine($"Kamu memilih {Karakter3} yang memiliki nyawa sebesar {Nyawa3}");
+               Console.WriteLine($"{Karakter3} memiliki daya rusak {Kerusakan3} dan mempunyai senjata {Senjata3}");
                 Console.WriteLine(" ");
                Console.WriteLine($"1.Lanjut sebagai {Karakter3} \n2.Pilih Karakter Lain ");
                int pilih=Convert.ToInt32(Console.ReadLine());
